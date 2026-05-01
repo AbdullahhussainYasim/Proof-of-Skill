@@ -1,8 +1,8 @@
 # Proof of Skill (PoSk)
 ### A Novel Blockchain Consensus Mechanism
 
-> **Blockchain Technology — Final Year Project | Phase 2**  
-> BSCS — Department of Computer Science
+> **Blockchain Technology - Final Year Project | Phase 2**  
+> BSCS - Department of Computer Science
 
 ---
 
@@ -21,7 +21,7 @@
 
 ## 📌 What is PoSk?
 
-**Proof of Skill (PoSk)** is a blockchain consensus mechanism where nodes earn the right to propose blocks by demonstrating genuine computational skill — not by wasting energy (like PoW) or staking wealth (like PoS).
+**Proof of Skill (PoSk)** is a blockchain consensus mechanism where nodes earn the right to propose blocks by demonstrating genuine computational skill - not by wasting energy (like PoW) or staking wealth (like PoS).
 
 Each round, nodes compete to solve a challenge. The winner is selected based on a **four-component skill score**:
 
@@ -31,10 +31,10 @@ PoSk_Score(n) = w1·A(n) + w2·E(n) + w3·D(n) + w4·R(n)
 
 | Component | Meaning | Weight |
 |-----------|---------|--------|
-| **A(n)** — Accuracy | 1.0 correct / 0.5 partial / 0.0 wrong | 0.35 |
-| **E(n)** — Efficiency | Normalised solve speed | 0.30 |
-| **D** — Difficulty | Task tier ∈ {1, 2, 3, 4, 5} | 0.20 |
-| **R(n)** — Reputation | Persistent historical score | 0.15 |
+| **A(n)** - Accuracy | 1.0 correct / 0.5 partial / 0.0 wrong | 0.35 |
+| **E(n)** - Efficiency | Normalised solve speed | 0.30 |
+| **D** - Difficulty | Task tier ∈ {1, 2, 3, 4, 5} | 0.20 |
+| **R(n)** - Reputation | Persistent historical score | 0.15 |
 
 Reputation increases by 1 for every correct solution and decreases by 1 for every wrong answer (floored at 0), rewarding consistent performers across rounds.
 
@@ -45,7 +45,7 @@ Reputation increases by 1 for every correct solution and decreases by 1 for ever
 ```
 posk/
 │
-├── posk_phase2_v2.py     ← Phase 2 prototype (all 5 modules)
+├── posk_init.py     ← Phase 2 prototype (all 5 modules)
 ├── README.md             ← This file
 │
 └── docs/
@@ -66,18 +66,18 @@ posk/
 ### Run the Phase 2 prototype
 
 ```bash
-python posk_phase2_v2.py
+python posk_init.py
 ```
 
 ### Expected output
 
 ```
-  PoSk Phase 2 — Prototype v2 (with Reputation)
+  PoSk Phase 2 - Prototype v2 (with Reputation)
   ──────────────────────────────────────────────
   Blockchain initialised. Genesis block created.
 
   ════════════════════════════════════════════════════════════
-  ROUND — Difficulty Tier: 3
+  ROUND - Difficulty Tier: 3
   ════════════════════════════════════════════════════════════
   Challenge : divisibility_search (divisor=21, limit=1500)
   ✓  N1      time=0.0312s  answer=21  rep=0
@@ -129,7 +129,7 @@ python posk_phase2_v2.py
 
 ---
 
-## 📐 Skill Score Formula — Details
+## 📐 Skill Score Formula - Details
 
 ### Accuracy A(n)
 ```
@@ -147,7 +147,7 @@ Guard: if t_max == t_min → E(n) = 1.0 for all nodes
 
 ### Difficulty D
 ```
-D ∈ {1, 2, 3, 4, 5}   — same for all nodes in a round
+D ∈ {1, 2, 3, 4, 5}   - same for all nodes in a round
 ```
 
 ### Reputation R(n)
@@ -164,7 +164,7 @@ Update rule (after each round):
 
 ---
 
-## ✅ Phase 2 — What's Done
+## ✅ Phase 2 - What's Done
 
 - [x] Four-component skill score formula with defined weights
 - [x] Five-module system architecture designed
@@ -177,20 +177,20 @@ Update rule (after each round):
 
 ---
 
-## 🔭 Phase 3 — Coming Next
+## 🔭 Phase 3 - Coming Next
 
 - [ ] Multi-round simulation (10+ rounds)
 - [ ] Three distinct challenge types (mathematical, sorting, pattern recognition)
 - [ ] Commit-reveal scheme to prevent solution copying
 - [ ] Performance graphs (score distribution, win frequency, reputation curves)
 - [ ] Benchmark comparison vs simulated PoW
-- [ ] Fairness analysis — does reputation cause winner lock-in?
+- [ ] Fairness analysis - does reputation cause winner lock-in?
 - [ ] Split codebase into separate module files
 - [ ] IEEE research paper draft
 
 ---
 
-## 🆚 Why PoSk? — Comparison
+## 🆚 Why PoSk? - Comparison
 
 | Feature | PoW | PoS | **PoSk** |
 |---------|-----|-----|---------|
