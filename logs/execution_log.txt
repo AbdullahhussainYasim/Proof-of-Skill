@@ -1,0 +1,368 @@
+PoSk Phase 3 — Execution Log
+Generated: 2026-05-09 20:36:10
+================================================================
+
+
+════════════════════════════════════════════════════════════════
+  Proof of Skill (PoSk)  —  Phase 3 Simulation
+  Multi-File Architecture  |  10 Rounds  |  Commit-Reveal
+  3 Challenge Types  |  Dynamic Difficulty  |  Benchmarking
+════════════════════════════════════════════════════════════════
+  Nodes: N1(skill=1.0)  |  N2(skill=0.85)  |  N3(skill=0.7)  |  N4(skill=0.55)  |  N5(skill=0.9  CHEATER)
+  Blockchain initialised — Genesis block created.
+
+════════════════════════════════════════════════════════════════
+  ROUND  1  │  Tier: 1  │  
+  ROUND  1  │  Tier: 1  │  Type: SORTING
+════════════════════════════════════════════════════════════════
+  Task    : Find first out-of-order index (-1 if fully sorted)
+  Data    : sequence=[44, 45, 54, 75, 20, 57, ...]  len=20
+  ────────────────────────────────────────────────────────────────
+  [SOLVE PHASE]
+  [COMMIT PHASE]  — nodes broadcast SHA-256(answer+salt)
+    N1: a8d8de3af3301a5950bd8105...  
+    N2: e0432386af8b74d58ccd36bf...  
+    N3: 0f763baafb7890e789508bf1...  
+    N4: 14ec69a5b4e7480d1550e850...  
+    N5: 7b46653defc6f7d81eefb14d...  [CHEATER]
+  [REVEAL PHASE]  — nodes reveal (answer, salt) for verification
+    N1: answer=4  expected=-1  time=0.0741s  ✗
+    N2: answer=4  expected=-1  time=0.0753s  ✗
+    N3: answer=4  expected=-1  time=0.1031s  ✗
+    N4: answer=4  expected=-1  time=0.0848s  ✗
+    N5: ⚠  TAMPERED — commitment mismatch — DISQUALIFIED
+
+  Node         A        E    D        R     Score  Note
+  ────────────────────────────────────────────────────────────────
+  N1         0.0   0.7977    1   1.0000    0.5893  
+  N2         0.0   0.7660    1   1.0000    0.5798  
+  N3         0.0   0.0000    1   1.0000    0.3500  
+  N4         0.0   0.5043    1   1.0000    0.5013  
+  N5         0.0   1.0000    1   1.0000    0.6500   ⚠ CHEAT
+
+  ★  Winner → N5  (score=0.6500)
+  Reputations: N1=0  |  N2=0  |  N3=0  |  N4=0  |  N5=0
+  Block #1 → Hash: 4b3aa6054f68c56fc1023b0a99ad4326...
+
+════════════════════════════════════════════════════════════════
+  ROUND  2  │  Tier: 1  │  
+  ROUND  2  │  Tier: 1  │  Type: MATHEMATICAL
+════════════════════════════════════════════════════════════════
+  Task    : Collatz sequence — count steps from start to 1
+  Data    : start=88
+  ────────────────────────────────────────────────────────────────
+  [SOLVE PHASE]
+  [COMMIT PHASE]  — nodes broadcast SHA-256(answer+salt)
+    N1: d4b9ff8404062e9b7289ca1f...  
+    N2: f8ada081a75696f84eed821b...  
+    N3: 8024174968c98cc4a5cff5b8...  
+    N4: 1f91cb63b84fb534ef4e390e...  
+    N5: 1d9d27c52c05bfb7dff95c94...  [CHEATER]
+  [REVEAL PHASE]  — nodes reveal (answer, salt) for verification
+    N1: answer=17  expected=17  time=0.0647s  ✓
+    N2: answer=17  expected=17  time=0.0622s  ✓
+    N3: answer=17  expected=17  time=0.0736s  ✓
+    N4: answer=17  expected=17  time=0.0941s  ✓
+    N5: ⚠  TAMPERED — commitment mismatch — DISQUALIFIED
+
+  Node         A        E    D        R     Score  Note
+  ────────────────────────────────────────────────────────────────
+  N1         1.0   0.9225    1   1.0000    0.9768  
+  N2         1.0   1.0000    1   1.0000    1.0000  
+  N3         1.0   0.6418    1   1.0000    0.8925  
+  N4         1.0   0.0000    1   1.0000    0.7000  
+  N5         0.0   0.9887    1   1.0000    0.6466   ⚠ CHEAT
+
+  ★  Winner → N2  (score=1.0000)
+  Reputations: N1=1  |  N2=1  |  N3=1  |  N4=1  |  N5=0
+  Block #2 → Hash: 1a7b931746be95ce3861fc746fba3273...
+
+════════════════════════════════════════════════════════════════
+  ROUND  3  │  Tier: 2  │  
+  ROUND  3  │  Tier: 2  │  Type: PATTERN
+════════════════════════════════════════════════════════════════
+  Task    : Predict the next term in the sequence
+  Data    : sequence=[46, 61, 76, 91, 106, 121]  → predict next
+  ────────────────────────────────────────────────────────────────
+  [SOLVE PHASE]
+  [COMMIT PHASE]  — nodes broadcast SHA-256(answer+salt)
+    N1: 0618b53b887849c635d9ed51...  
+    N2: 7c67a499a683cd9b55f61f25...  
+    N3: 38a1faca9b6dc494c43ee27f...  
+    N4: dc61fbb20897c5b3a7c45e3e...  
+    N5: 0cfbffc057c301d2337ccc4c...  [CHEATER]
+  [REVEAL PHASE]  — nodes reveal (answer, salt) for verification
+    N1: answer=136  expected=136  time=0.0208s  ✓
+    N2: answer=136  expected=136  time=0.0207s  ✓
+    N3: answer=136  expected=136  time=0.0296s  ✓
+    N4: answer=138  expected=136  time=0.0279s  ✗
+    N5: ⚠  TAMPERED — commitment mismatch — DISQUALIFIED
+
+  Node         A        E    D        R     Score  Note
+  ────────────────────────────────────────────────────────────────
+  N1         1.0   0.9866    2   1.0000    1.1960  
+  N2         1.0   1.0000    2   1.0000    1.2000  
+  N3         1.0   0.0000    2   1.0000    0.9000  
+  N4         0.0   0.1871    2   1.0000    0.6061  
+  N5         0.0   0.5622    2   0.0000    0.5687   ⚠ CHEAT
+
+  ★  Winner → N2  (score=1.2000)
+  Reputations: N1=2  |  N2=2  |  N3=2  |  N4=0  |  N5=0
+  Block #3 → Hash: bdaaaac554579b8400cb9a87ed69b6a9...
+
+════════════════════════════════════════════════════════════════
+  ROUND  4  │  Tier: 2  │  
+  ROUND  4  │  Tier: 2  │  Type: MATHEMATICAL
+════════════════════════════════════════════════════════════════
+  Task    : Collatz sequence — count steps from start to 1
+  Data    : start=319
+  ────────────────────────────────────────────────────────────────
+  [SOLVE PHASE]
+  [COMMIT PHASE]  — nodes broadcast SHA-256(answer+salt)
+    N1: c0bb8770bd96712105ebffc5...  
+    N2: a89a33b826973dff7e3d5cd2...  
+    N3: 83f205207e231c9d23db003b...  
+    N4: 775d8d76853996dcebd9992f...  
+    N5: ab238278a706c5eaf5e918c9...  [CHEATER]
+  [REVEAL PHASE]  — nodes reveal (answer, salt) for verification
+    N1: answer=55  expected=55  time=0.1927s  ✓
+    N2: answer=55  expected=55  time=0.2044s  ✓
+    N3: answer=56  expected=55  time=0.2501s  ✗
+    N4: answer=55  expected=55  time=0.3098s  ✓
+    N5: ⚠  TAMPERED — commitment mismatch — DISQUALIFIED
+
+  Node         A        E    D        R     Score  Note
+  ────────────────────────────────────────────────────────────────
+  N1         1.0   1.0000    2   1.0000    1.2000  
+  N2         1.0   0.9001    2   1.0000    1.1700  
+  N3         0.0   0.5099    2   1.0000    0.7030  
+  N4         1.0   0.0000    2   0.0000    0.7500  
+  N5         0.0   0.9797    2   0.0000    0.6939   ⚠ CHEAT
+
+  ★  Winner → N1  (score=1.2000)
+  Reputations: N1=3  |  N2=3  |  N3=1  |  N4=1  |  N5=0
+  Block #4 → Hash: 193f6992d3f882aaf2dfb68bf19c64a0...
+
+════════════════════════════════════════════════════════════════
+  ROUND  5  │  Tier: 3  │  
+  ROUND  5  │  Tier: 3  │  Type: MATHEMATICAL
+════════════════════════════════════════════════════════════════
+  Task    : Collatz sequence — count steps from start to 1
+  Data    : start=590
+  ────────────────────────────────────────────────────────────────
+  [SOLVE PHASE]
+  [COMMIT PHASE]  — nodes broadcast SHA-256(answer+salt)
+    N1: cf6a1952afe1e18e810e0753...  
+    N2: 10a81d0540f2ce6257bbff62...  
+    N3: 9bc064ddf0e2e92f4d735eff...  
+    N4: b654367ec63a190b10820c68...  
+    N5: 3466399882e1cc6af8ff284c...  [CHEATER]
+  [REVEAL PHASE]  — nodes reveal (answer, salt) for verification
+    N1: answer=56  expected=56  time=0.1882s  ✓
+    N2: answer=56  expected=56  time=0.2459s  ✓
+    N3: answer=56  expected=56  time=0.2655s  ✓
+    N4: answer=56  expected=56  time=0.3134s  ✓
+    N5: ⚠  TAMPERED — commitment mismatch — DISQUALIFIED
+
+  Node         A        E    D        R     Score  Note
+  ────────────────────────────────────────────────────────────────
+  N1         1.0   1.0000    3   1.0000    1.4000  
+  N2         1.0   0.5396    3   1.0000    1.2619  
+  N3         1.0   0.3830    3   0.3333    1.1149  
+  N4         1.0   0.0000    3   0.3333    1.0000  
+  N5         0.0   0.8271    3   0.0000    0.8481   ⚠ CHEAT
+
+  ★  Winner → N1  (score=1.4000)
+  Reputations: N1=4  |  N2=4  |  N3=2  |  N4=2  |  N5=0
+  Block #5 → Hash: b018f629120b63331d8db3b44118b3dc...
+
+════════════════════════════════════════════════════════════════
+  ROUND  6  │  Tier: 3  │  
+  ROUND  6  │  Tier: 3  │  Type: SORTING
+════════════════════════════════════════════════════════════════
+  Task    : Find first out-of-order index (-1 if fully sorted)
+  Data    : sequence=[544, 581, 268, 407, 25, 157, ...]  len=55
+  ────────────────────────────────────────────────────────────────
+  [SOLVE PHASE]
+  [COMMIT PHASE]  — nodes broadcast SHA-256(answer+salt)
+    N1: c4025d485d29f5caf16bf54e...  
+    N2: ce984408d16c5b1bfa0b5621...  
+    N3: 8d0afbd8524f5d6cb448f14c...  
+    N4: ba311c76a262081a9b3f2228...  
+    N5: 120f4ec157f9f26c8267e508...  [CHEATER]
+  [REVEAL PHASE]  — nodes reveal (answer, salt) for verification
+    N1: answer=2  expected=2  time=0.1937s  ✓
+    N2: answer=2  expected=2  time=0.2152s  ✓
+    N3: answer=2  expected=2  time=0.2319s  ✓
+    N4: answer=2  expected=2  time=0.3468s  ✓
+    N5: ⚠  TAMPERED — commitment mismatch — DISQUALIFIED
+
+  Node         A        E    D        R     Score  Note
+  ────────────────────────────────────────────────────────────────
+  N1         1.0   1.0000    3   1.0000    1.4000  
+  N2         1.0   0.8594    3   1.0000    1.3578  
+  N3         1.0   0.7505    3   0.5000    1.2502  
+  N4         1.0   0.0000    3   0.5000    1.0250  
+  N5         0.0   1.0000    3   0.0000    0.9000   ⚠ CHEAT
+
+  ★  Winner → N1  (score=1.4000)
+  Reputations: N1=5  |  N2=5  |  N3=3  |  N4=3  |  N5=0
+  Block #6 → Hash: b310d713b69eae8ccc48f602e97fd405...
+
+════════════════════════════════════════════════════════════════
+  ROUND  7  │  Tier: 4  │  
+  ROUND  7  │  Tier: 4  │  Type: PATTERN
+════════════════════════════════════════════════════════════════
+  Task    : Predict the next term in the sequence
+  Data    : sequence=[5, 20, 80, 320]  → predict next
+  ────────────────────────────────────────────────────────────────
+  [SOLVE PHASE]
+  [COMMIT PHASE]  — nodes broadcast SHA-256(answer+salt)
+    N1: 16bfd87f17e2f7aa9cb83e34...  
+    N2: 87be08fab1069d95ec30698f...  
+    N3: d10471b6433c4b539eeb4729...  
+    N4: 6af59b7be74d8c9c5ae82315...  
+    N5: f18f547901104ddb4dbe9871...  [CHEATER]
+  [REVEAL PHASE]  — nodes reveal (answer, salt) for verification
+    N1: answer=1280  expected=1280  time=0.0093s  ✓
+    N2: answer=1280  expected=1280  time=0.0174s  ✓
+    N3: answer=1280  expected=1280  time=0.0201s  ✓
+    N4: answer=1280  expected=1280  time=0.0224s  ✓
+    N5: ⚠  TAMPERED — commitment mismatch — DISQUALIFIED
+
+  Node         A        E    D        R     Score  Note
+  ────────────────────────────────────────────────────────────────
+  N1         1.0   1.0000    4   1.0000    1.6000  
+  N2         1.0   0.3831    4   1.0000    1.4149  
+  N3         1.0   0.1715    4   0.6000    1.2914  
+  N4         1.0   0.0000    4   0.6000    1.2400  
+  N5         0.0   0.7943    4   0.0000    1.0383   ⚠ CHEAT
+
+  ★  Winner → N1  (score=1.6000)
+  Reputations: N1=6  |  N2=6  |  N3=4  |  N4=4  |  N5=0
+  Block #7 → Hash: 90265b2808b25bcb38df32009fc0e794...
+
+════════════════════════════════════════════════════════════════
+  ROUND  8  │  Tier: 4  │  
+  ROUND  8  │  Tier: 4  │  Type: MATHEMATICAL
+════════════════════════════════════════════════════════════════
+  Task    : Collatz sequence — count steps from start to 1
+  Data    : start=2937
+  ────────────────────────────────────────────────────────────────
+  [SOLVE PHASE]
+  [COMMIT PHASE]  — nodes broadcast SHA-256(answer+salt)
+    N1: 6f3cd00e694e87b935f88203...  
+    N2: 8c8684c48b033a862800b110...  
+    N3: defcd1b25b85bc344807cae6...  
+    N4: db6b5476ca9f96a5a8950543...  
+    N5: fe1d21e8b90b61f8a719ff9d...  [CHEATER]
+  [REVEAL PHASE]  — nodes reveal (answer, salt) for verification
+    N1: answer=53  expected=53  time=0.1730s  ✓
+    N2: answer=53  expected=53  time=0.1986s  ✓
+    N3: answer=53  expected=53  time=0.2413s  ✓
+    N4: answer=53  expected=53  time=0.3135s  ✓
+    N5: ⚠  TAMPERED — commitment mismatch — DISQUALIFIED
+
+  Node         A        E    D        R     Score  Note
+  ────────────────────────────────────────────────────────────────
+  N1         1.0   1.0000    4   1.0000    1.6000  
+  N2         1.0   0.8180    4   1.0000    1.5454  
+  N3         1.0   0.5137    4   0.6667    1.4041  
+  N4         1.0   0.0000    4   0.6667    1.2500  
+  N5         0.0   0.8266    4   0.0000    1.0480   ⚠ CHEAT
+
+  ★  Winner → N1  (score=1.6000)
+  Reputations: N1=7  |  N2=7  |  N3=5  |  N4=5  |  N5=0
+  Block #8 → Hash: ab324aa1285ddf6f011ebfab991e63de...
+
+════════════════════════════════════════════════════════════════
+  ROUND  9  │  Tier: 5  │  
+  ROUND  9  │  Tier: 5  │  Type: PATTERN
+════════════════════════════════════════════════════════════════
+  Task    : Predict the next term in the sequence
+  Data    : sequence=[5, 10, 20]  → predict next
+  ────────────────────────────────────────────────────────────────
+  [SOLVE PHASE]
+  [COMMIT PHASE]  — nodes broadcast SHA-256(answer+salt)
+    N1: d87792f6e04c94a4abe856b9...  
+    N2: bdea14ec83d57711b3354562...  
+    N3: 3dcd15ded605d17872c87911...  
+    N4: 11dfc393b05da5a996679cde...  
+    N5: 3913283b876f0b6d61e1ffba...  [CHEATER]
+  [REVEAL PHASE]  — nodes reveal (answer, salt) for verification
+    N1: answer=40  expected=40  time=0.0103s  ✓
+    N2: answer=40  expected=40  time=0.0101s  ✓
+    N3: answer=40  expected=40  time=0.0115s  ✓
+    N4: answer=40  expected=40  time=0.0138s  ✓
+    N5: ⚠  TAMPERED — commitment mismatch — DISQUALIFIED
+
+  Node         A        E    D        R     Score  Note
+  ────────────────────────────────────────────────────────────────
+  N1         1.0   0.9533    5   1.0000    1.7860  
+  N2         1.0   1.0000    5   1.0000    1.8000  
+  N3         1.0   0.6171    5   0.7143    1.6423  
+  N4         1.0   0.0000    5   0.7143    1.4571  
+  N5         0.0   0.6051    5   0.0000    1.1815   ⚠ CHEAT
+
+  ★  Winner → N2  (score=1.8000)
+  Reputations: N1=8  |  N2=8  |  N3=6  |  N4=6  |  N5=0
+  Block #9 → Hash: 2aa875223d088e24bc98fb72e54a46f0...
+
+════════════════════════════════════════════════════════════════
+  ROUND 10  │  Tier: 5  │  
+  ROUND 10  │  Tier: 5  │  Type: SORTING
+════════════════════════════════════════════════════════════════
+  Task    : Find first out-of-order index (-1 if fully sorted)
+  Data    : sequence=[1985, 857, 1475, 1109, 1425, 1052, ...]  len=120
+  ────────────────────────────────────────────────────────────────
+  [SOLVE PHASE]
+  [COMMIT PHASE]  — nodes broadcast SHA-256(answer+salt)
+    N1: 4c312231aac8ed8f40c1b543...  
+    N2: 015105569e96c79b17bfdb3a...  
+    N3: 5cb76d012b7dfd11c18efff3...  
+    N4: 4a33475ae4bed08ae2c657c1...  
+    N5: 7517af604e9dde30c946312e...  [CHEATER]
+  [REVEAL PHASE]  — nodes reveal (answer, salt) for verification
+    N1: answer=1  expected=1  time=0.4195s  ✓
+    N2: answer=1  expected=1  time=0.5256s  ✓
+    N3: answer=1  expected=1  time=0.4502s  ✓
+    N4: answer=1  expected=1  time=0.8498s  ✓
+    N5: ⚠  TAMPERED — commitment mismatch — DISQUALIFIED
+
+  Node         A        E    D        R     Score  Note
+  ────────────────────────────────────────────────────────────────
+  N1         1.0   1.0000    5   1.0000    1.8000  
+  N2         1.0   0.7534    5   1.0000    1.7260  
+  N3         1.0   0.9287    5   0.7500    1.7411  
+  N4         1.0   0.0000    5   0.7500    1.4625  
+  N5         0.0   1.0000    5   0.0000    1.3000   ⚠ CHEAT
+
+  ★  Winner → N1  (score=1.8000)
+  Reputations: N1=9  |  N2=9  |  N3=7  |  N4=7  |  N5=0
+  Block #10 → Hash: 74173b09531ac9cc6784b70777dce721...
+
+────────────────────────────────────────────────────────────────
+  CHAIN INTEGRITY VERIFICATION
+────────────────────────────────────────────────────────────────
+  Result : ✓ PASSED  — Chain intact
+  Blocks : 11  (genesis + 10 round blocks)
+
+────────────────────────────────────────────────────────────────
+  BLOCK CHAIN SUMMARY
+────────────────────────────────────────────────────────────────
+  #0   GENESIS
+  #1   R1  proposer=N5   type=sorting         score=0.6500  hash=4b3aa6054f68c56f...
+  #2   R2  proposer=N2   type=mathematical    score=1.0000  hash=1a7b931746be95ce...
+  #3   R3  proposer=N2   type=pattern         score=1.2000  hash=bdaaaac554579b84...
+  #4   R4  proposer=N1   type=mathematical    score=1.2000  hash=193f6992d3f882aa...
+  #5   R5  proposer=N1   type=mathematical    score=1.4000  hash=b018f629120b6333...
+  #6   R6  proposer=N1   type=sorting         score=1.4000  hash=b310d713b69eae8c...
+  #7   R7  proposer=N1   type=pattern         score=1.6000  hash=90265b2808b25bcb...
+  #8   R8  proposer=N1   type=mathematical    score=1.6000  hash=ab324aa1285ddf6f...
+  #9   R9  proposer=N2   type=pattern         score=1.8000  hash=2aa875223d088e24...
+  #10  R10 proposer=N1   type=sorting         score=1.8000  hash=74173b09531ac9cc...
+
+────────────────────────────────────────────────────────────────
+  PERFORMANCE BENCHMARKING
+────────────────────────────────────────────────────────────────
+  Metrics saved → results\metrics.json
